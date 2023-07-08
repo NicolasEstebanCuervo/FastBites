@@ -15,8 +15,8 @@ function Index() {
                 <Header />
                 <BestFood />
                 <Stats />
-                {/* <Menu />
-                <Order /> */}
+                <Menu />
+                <Order />
             </SubContainerIndex>
             <Footer />
         </IndexContainer>

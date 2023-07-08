@@ -46,6 +46,7 @@ const StatsContainer = styled.section`
 
     @media (max-width: 500px) {
         grid-template-columns: repeat(1, 250px);
+        gap: 1%;
     }
 
     @media (max-width: 400px) {

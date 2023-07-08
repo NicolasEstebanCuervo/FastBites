@@ -24,6 +24,14 @@ const OrderContainer = styled.section`
 const TitleOrder = styled.h1`
     font-size: 50px;
     color: #662E9B;
+
+    @media (max-width: 1000PX) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 7vw;
+    }
 `
 
 const SubtitleOrder = styled.p`
@@ -31,6 +39,14 @@ const SubtitleOrder = styled.p`
     font-size: 25px;
     max-width: 50%;
     color: #662E9B;
+
+    @media (max-width: 1000PX) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 7vw;
+    }
 `
 
 const ButtonOrder = styled.button`
@@ -40,5 +56,12 @@ const ButtonOrder = styled.button`
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
     margin-top: 15px;
+
+    @media (max-width: 300px) {
+        font-size: 6vw;
+        padding: 1vh 6vw;
+
+    }
 `

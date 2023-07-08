@@ -101,16 +101,36 @@ const HamburgerImage = styled.img`
     width: 100%;
     max-width: 300px;
 
-    @media (max-width: 1600px) {
-        max-width: 230px;
+    @media (max-width: 1200px) {
+        max-width: 260px;
     }
 
-    @media (max-width: 1300px) {
-        max-width: 300px;
+    @media (max-width: 1000px) {
+        max-width: 200px;
     }
 
-    @media (max-width: 800px) {
-        max-width: 230px;
+    @media (max-width: 850px) {
+        max-width: 260px;
+    }
+
+    @media (max-width: 650px) {
+        max-width: 200px;
+    }
+
+    @media (max-width: 550px) {
+        max-width: 260px;
+    }
+    
+    @media (max-width: 350px) {
+        max-width: 200px;
+    }
+
+    @media (max-width: 250px) {
+        max-width: 150px;
+    }
+
+    @media (max-width: 200px) {
+        max-width: 100px;
     }
 `;
 
