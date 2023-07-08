@@ -45,7 +45,8 @@ const SubtitleOrder = styled.p`
     }
 
     @media (max-width: 400px) {
-        font-size: 7vw;
+        max-width: 80%;
+        font-size: 6vw;
     }
 `
 
