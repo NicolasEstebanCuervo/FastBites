@@ -62,7 +62,29 @@ const HeaderContainer = styled.header`
 
 const TitleHeader = styled.header`
     font-size: 45px;
-    @media (max-width: 800px) {        
-        font-size: 5vw;
+
+    @media (max-width: 600px) {        
+        font-size: 40px;
     }
+
+    @media (max-width: 500px) {        
+        font-size: 35px;
+    }
+
+    @media (max-width: 400px) {        
+        font-size: 30px;
+    }
+
+    @media (max-width: 300px) {        
+        font-size: 25px;
+    }
+
+    @media (max-width: 200px) {        
+        font-size: 20px;
+    }
+
+    @media (max-width: 100px) {        
+        font-size: 10vw;
+    }
+
 `
