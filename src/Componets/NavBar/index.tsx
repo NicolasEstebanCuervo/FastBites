@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "@emotion/styled";
 import hamburguerIcon from "../../Assets/Icons/Hamburguer.svg";
+import hamburguerButton from "../../Assets/Icons/HamburguerButton.svg";
 
 function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -12,14 +13,16 @@ function NavBar() {
     return (
         <Nav>
             <Logo src={hamburguerIcon} alt="Hamburguer Icon" />
-            <HamburgerButton onClick={toggleMenu}>
-                <HamburgerIcon src={hamburguerIcon} alt="Hamburguer Icon" />
-            </HamburgerButton>
-            <Menu open={menuOpen}>
-                <MenuItem>Home</MenuItem>
-                <MenuItem>About</MenuItem>
-                <MenuItem>Contact</MenuItem>
-            </Menu>
+            <SubContainerNav>
+                <HamburgerButton onClick={toggleMenu}>
+                    <HamburgerIcon src={hamburguerButton} alt="Hamburguer Icon" />
+                </HamburgerButton>
+                <Menu open={menuOpen}>
+                    <MenuItem>Home</MenuItem>
+                    <MenuItem>About</MenuItem>
+                    <MenuItem>Contact</MenuItem>
+                </Menu>
+            </SubContainerNav>
         </Nav>
     );
 }
@@ -33,7 +36,6 @@ const Nav = styled.nav`
     align-items: center;
 
     @media (max-width: 768px) {
-        flex-direction: column;
         align-items: flex-start;
     }
 `;
@@ -41,6 +43,17 @@ const Nav = styled.nav`
 const Logo = styled.img`
     width: 40px;
     height: 40px;
+`;
+
+const SubContainerNav = styled.div`
+    width: 30%;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 const HamburgerButton = styled.button`
@@ -51,7 +64,8 @@ const HamburgerButton = styled.button`
     cursor: pointer;
 
     @media (max-width: 768px) {
-        display: block;
+        display: flex;
+        justify-content: flex-end;
     }
 `;
 
@@ -66,12 +80,13 @@ interface MenuProps {
 
 const Menu = styled.ul<MenuProps>`
     display: flex;
-    justify-content: space-between;
     list-style: none;
-    width: 30%;
     @media (max-width: 768px) {
         flex-direction: column;
-        align-items: flex-start;
+        padding: 2% 5%;
+        background: #f2f2f2;
+        width: 100%;
+        align-items: flex-end;
         display: ${({ open }) => (open ? "flex" : "none")};
     }
 `;
