@@ -27,15 +27,18 @@ const FooterContainer = styled.footer`
     @media (max-width: 800px) {
         padding: 5% 0;
     }
+
+    @media (max-width: 200px) {
+        gap: 10px;
+    }
 `;
 
 const LogoFooter = styled.img`
     width: 70px;
-    height: 70px;
+    height: auto;
 
-    @media (max-width: 800px) {
-        width: 50px;
-        height: 50px;
+    @media (max-width: 500px) {
+        width: 14vw;
     }
 `;
 
@@ -43,8 +46,7 @@ const TitleFooter = styled.h1`
     font-size: 20px;
     color: #4e4e4e;
 
-    @media (max-width: 800px) {
-        font-size: 15px;
-        text-align: center;
+    @media (max-width: 750px) {
+        font-size: 2.7vw;
     }
 `;

@@ -181,7 +181,6 @@ const TextContainer = styled.div`
 const TitleFood = styled.h1`
     font-size: 24px;
     margin-top: 10px;
-
     
     @media (max-width: 1000PX) {
         font-size: 20px;

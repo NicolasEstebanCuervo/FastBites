@@ -60,6 +60,10 @@ const StatsContainer = styled.section`
     @media (max-width: 200px) {
         grid-template-columns: repeat(1, 100px);
     }
+
+    @media (max-width: 100px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 const Stat = styled.div`
