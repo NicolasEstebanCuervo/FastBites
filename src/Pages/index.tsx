@@ -1,34 +1,19 @@
-import BestFood from "../Componets/BestFood";
-import Header from "../Componets/Header";
-import NavBar from "../Componets/NavBar";
-import styled from "@emotion/styled";
-import Stats from "../Componets/Stats";
-import Menu from "../Componets/Menu";
-import Order from "../Componets/Order";
-import Footer from "../Componets/Footer";
+import { DataProvider } from "../Context/Context";
+import Index from "./IndexPage";
+import Menu from "./MenuPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function Index() {
+const Page = () => {
     return (
-        <IndexContainer>
-            <SubContainerIndex>
-                <NavBar />
-                <Header />
-                <BestFood />
-                <Stats />
-                <Menu />
-                <Order />
-            </SubContainerIndex>
-            <Footer />
-        </IndexContainer>
+        <DataProvider>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Index></Index>}></Route>
+                    <Route path="/Menu" element={<Menu></Menu>}></Route>
+                </Routes>
+            </BrowserRouter>
+        </DataProvider>
     );
-}
+};
 
-export default Index;
-
-const IndexContainer = styled.main``;
-
-const SubContainerIndex = styled.main`
-    width: 90%;
-    margin: auto;
-    padding: 3% 0;
-`;
+export default Page;

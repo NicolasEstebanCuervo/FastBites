@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import hamburguerImage from "../../Assets/Images/Hamburguer.png";
+import HotDog from "../../Assets/Images/HotDog.png";
+import Pizza from "../../Assets/Images/Pizza.png";
 
 function BestFood() {
     return (
@@ -9,8 +10,8 @@ function BestFood() {
                 <BestFoodIndividual>
                     <ImageContainer>
                         <HamburgerImage
-                            src={hamburguerImage}
-                            alt="Hamburguer Icon"
+                            src={HotDog}
+                            alt="HotDog"
                         />
                     </ImageContainer>
                     <InfoContainer>
@@ -27,8 +28,8 @@ function BestFood() {
                 <BestFoodIndividual>
                     <ImageContainer>
                         <HamburgerImage
-                            src={hamburguerImage}
-                            alt="Hamburguer Icon"
+                            src={Pizza}
+                            alt="Pizza"
                         />
                     </ImageContainer>
                     <InfoContainer>

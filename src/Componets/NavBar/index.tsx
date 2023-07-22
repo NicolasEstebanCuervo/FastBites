@@ -1,26 +1,39 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import hamburguerIcon from "../../Assets/Icons/Hamburguer.svg";
 import hamburguerButton from "../../Assets/Icons/HamburguerButton.svg";
+import { Link } from "react-router-dom";
 
 function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [cartOpen, setCartOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const toggleCart = () => {
+        setCartOpen(!cartOpen);
+    };
+    
     return (
         <Nav>
             <Logo src={hamburguerIcon} alt="Hamburguer Icon" />
             <SubContainerNav>
                 <HamburgerButton onClick={toggleMenu}>
-                    <HamburgerIcon src={hamburguerButton} alt="Hamburguer Icon" />
+                    <HamburgerIcon
+                        src={hamburguerButton}
+                        alt="Hamburguer Icon"
+                    />
                 </HamburgerButton>
                 <Menu open={menuOpen}>
-                    <MenuItem>Home</MenuItem>
-                    <MenuItem>About</MenuItem>
-                    <MenuItem>Contact</MenuItem>
+                    <MenuItem>
+                        <StyledLink to="/">Home</StyledLink>
+                    </MenuItem>
+                    <MenuItem>
+                        <StyledLink to="/Menu">Menu</StyledLink>
+                    </MenuItem>
+                    <MenuItem onClick={toggleCart}>Trolley</MenuItem>
                 </Menu>
             </SubContainerNav>
         </Nav>
@@ -98,4 +111,9 @@ const MenuItem = styled.li`
     @media (max-width: 768px) {
         margin-bottom: 10px;
     }
+`;
+
+const StyledLink = styled(Link)`
+    color: #000;
+    text-decoration: none;
 `;

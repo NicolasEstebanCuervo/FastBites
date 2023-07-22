@@ -1,11 +1,17 @@
 import styled from "@emotion/styled";
-import BurritoIcon from "../../Assets/Images/Hamburguer.png";
+import Hamburguer from "../../Assets/Images/Hamburguer.png";
+import Pizza from "../../Assets/Images/Pizza.png";
+import Tacos from "../../Assets/Images/Tacos.png";
+import Burrito from "../../Assets/Images/Burrito.png";
+import RiedChicken from "../../Assets/Images/RiedChicken.png";
+import HotDog from "../../Assets/Images/HotDog.png";
+
 
 function Menu() {
     return (
         <MenuContainer>
             <FoodContainer>
-                <ImageFood src={BurritoIcon} alt="Burrito Icon" />
+                <ImageFood src={Hamburguer} alt="Hamburguer" />
                 <TextContainer>
                     <TitleFood>Hamburguesa</TitleFood>
                     <DescriptionFood>
@@ -18,9 +24,9 @@ function Menu() {
             </FoodContainer>
 
             <FoodContainer>
-                <ImageFood src={BurritoIcon} alt="Burrito Icon" />
+                <ImageFood src={Pizza} alt="Pizza" />
                 <TextContainer>
-                    <TitleFood>Hamburguesa</TitleFood>
+                    <TitleFood>Pizza</TitleFood>
                     <DescriptionFood>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Pariatur laboriosam quo doloremque nemo eos corrupti
@@ -31,9 +37,9 @@ function Menu() {
             </FoodContainer>
 
             <FoodContainer>
-                <ImageFood src={BurritoIcon} alt="Burrito Icon" />
+                <ImageFood src={Tacos} alt="Tacos" />
                 <TextContainer>
-                    <TitleFood>Hamburguesa</TitleFood>
+                    <TitleFood>Tacos</TitleFood>
                     <DescriptionFood>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Pariatur laboriosam quo doloremque nemo eos corrupti
@@ -44,9 +50,9 @@ function Menu() {
             </FoodContainer>
 
             <FoodContainer>
-                <ImageFood src={BurritoIcon} alt="Burrito Icon" />
+                <ImageFood src={Burrito} alt="Burrito" />
                 <TextContainer>
-                    <TitleFood>Hamburguesa</TitleFood>
+                    <TitleFood>Burritos</TitleFood>
                     <DescriptionFood>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Pariatur laboriosam quo doloremque nemo eos corrupti
@@ -57,9 +63,9 @@ function Menu() {
             </FoodContainer>
 
             <FoodContainer>
-                <ImageFood src={BurritoIcon} alt="Burrito Icon" />
+                <ImageFood src={RiedChicken} alt="RiedChicken" />
                 <TextContainer>
-                    <TitleFood>Hamburguesa</TitleFood>
+                    <TitleFood>RiedChicken</TitleFood>
                     <DescriptionFood>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Pariatur laboriosam quo doloremque nemo eos corrupti
@@ -70,9 +76,9 @@ function Menu() {
             </FoodContainer>
 
             <FoodContainer>
-                <ImageFood src={BurritoIcon} alt="Burrito Icon" />
+                <ImageFood src={HotDog} alt="HotDog" />
                 <TextContainer>
-                    <TitleFood>Hamburguesa</TitleFood>
+                    <TitleFood>Hot Dog</TitleFood>
                     <DescriptionFood>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Pariatur laboriosam quo doloremque nemo eos corrupti
