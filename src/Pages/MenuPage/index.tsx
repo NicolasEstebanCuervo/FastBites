@@ -10,6 +10,7 @@ function Menu() {
             <SubContainerIndex>
                 <NavBar />
                 <MenuList/>
+                <Carrito/>
             </SubContainerIndex>
             <Footer />
         </main>

@@ -31,126 +31,178 @@ const MenuList = () => {
     );
 
     return (
-        <div>
-            <ContainerMenu>
-                {hamburguerProducts.map((product) => (
-                    <ItemList
-                        key={product.id}
-                        title={product.title}
-                        image={product.image}
-                        category={product.category}
-                        price={product.price}
-                        id={product.id}
-                    />
-                ))}
-            </ContainerMenu>
+        <ContainerMenu>
+            <TitleMenu>What do you feel like eating today?</TitleMenu>
 
-            <ContainerMenu>
-                {pizzaProducts.map((product) => (
-                    <ItemList
-                        key={product.id}
-                        title={product.title}
-                        image={product.image}
-                        category={product.category}
-                        price={product.price}
-                        id={product.id}
-                    />
-                ))}
-            </ContainerMenu>
-            
-            <ContainerMenu>
-                {tacosProducts.map((product) => (
-                    <ItemList
-                        key={product.id}
-                        title={product.title}
-                        image={product.image}
-                        category={product.category}
-                        price={product.price}
-                        id={product.id}
-                    />
-                ))}
-            </ContainerMenu>
-            
-            <ContainerMenu>
-                {burritosProducts.map((product) => (
-                    <ItemList
-                        key={product.id}
-                        title={product.title}
-                        image={product.image}
-                        category={product.category}
-                        price={product.price}
-                        id={product.id}
-                    />
-                ))}
-            </ContainerMenu>
+            {/* Hamburgers Section */}
+            <ContainerIndividualMenu>
+                <TitleSection>
+                    Burger Bliss: Unleash Your Inner Foodie!
+                </TitleSection>
+                <SubContainerIndividualMenu>
+                    {hamburguerProducts.map((product) => (
+                        <ItemList
+                            key={product.id}
+                            title={product.title}
+                            image={product.image}
+                            category={product.category}
+                            price={product.price}
+                            id={product.id}
+                        />
+                    ))}
+                </SubContainerIndividualMenu>
+            </ContainerIndividualMenu>
 
-            <ContainerMenu>
-                {chickenProducts.map((product) => (
-                    <ItemList
-                        key={product.id}
-                        title={product.title}
-                        image={product.image}
-                        category={product.category}
-                        price={product.price}
-                        id={product.id}
-                    />
-                ))}
-            </ContainerMenu>
+            {/* Pizza Section */}
+            <ContainerIndividualMenu>
+                <TitleSection>Pizza Passion: Savor the Flavor!</TitleSection>
+                <SubContainerIndividualMenu>
+                    {pizzaProducts.map((product) => (
+                        <ItemList
+                            key={product.id}
+                            title={product.title}
+                            image={product.image}
+                            category={product.category}
+                            price={product.price}
+                            id={product.id}
+                        />
+                    ))}
+                </SubContainerIndividualMenu>
+            </ContainerIndividualMenu>
 
-            <ContainerMenu>
-                {hotDogProducts.map((product) => (
-                    <ItemList
-                        key={product.id}
-                        title={product.title}
-                        image={product.image}
-                        category={product.category}
-                        price={product.price}
-                        id={product.id}
-                    />
-                ))}
-            </ContainerMenu>
+            {/* Tacos Section */}
+            <ContainerIndividualMenu>
+                <TitleSection>Taco Time: Spice Up Your Day!</TitleSection>
+                <SubContainerIndividualMenu>
+                    {tacosProducts.map((product) => (
+                        <ItemList
+                            key={product.id}
+                            title={product.title}
+                            image={product.image}
+                            category={product.category}
+                            price={product.price}
+                            id={product.id}
+                        />
+                    ))}
+                </SubContainerIndividualMenu>
+            </ContainerIndividualMenu>
 
-        </div>
+            {/* Burritos Section */}
+            <ContainerIndividualMenu>
+                <TitleSection>Burrito Bonanza: Roll into Flavor!</TitleSection>
+                <SubContainerIndividualMenu>
+                    {burritosProducts.map((product) => (
+                        <ItemList
+                            key={product.id}
+                            title={product.title}
+                            image={product.image}
+                            category={product.category}
+                            price={product.price}
+                            id={product.id}
+                        />
+                    ))}
+                </SubContainerIndividualMenu>
+            </ContainerIndividualMenu>
+
+            {/* Chicken Section */}
+            <ContainerIndividualMenu>
+                <TitleSection>
+                    Chicken Craze: Taste the Perfection!
+                </TitleSection>
+                <SubContainerIndividualMenu>
+                    {chickenProducts.map((product) => (
+                        <ItemList
+                            key={product.id}
+                            title={product.title}
+                            image={product.image}
+                            category={product.category}
+                            price={product.price}
+                            id={product.id}
+                        />
+                    ))}
+                </SubContainerIndividualMenu>
+            </ContainerIndividualMenu>
+
+            {/* Hot Dogs Section */}
+            <ContainerIndividualMenu>
+                <TitleSection>Hot Dog Heaven: Bite into Joy!</TitleSection>
+                <SubContainerIndividualMenu>
+                    {hotDogProducts.map((product) => (
+                        <ItemList
+                            key={product.id}
+                            title={product.title}
+                            image={product.image}
+                            category={product.category}
+                            price={product.price}
+                            id={product.id}
+                        />
+                    ))}
+                </SubContainerIndividualMenu>
+            </ContainerIndividualMenu>
+        </ContainerMenu>
     );
 };
 
 export default MenuList;
 
 const ContainerMenu = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+    gap: 20px;
+`;
+const TitleMenu = styled.h1`
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 60px;
+    
+    @media (max-width: 500px) {
+        font-size: 10vw;
+    }
+`;
+
+const ContainerIndividualMenu = styled.div`
+    margin-bottom: 5%;
+`;
+
+const TitleSection = styled.h1`
+    font-size: 30px;
+    padding: 2% 2%;
+    
+    @media (max-width: 500px) {
+        font-size: 6vw;
+    }
+`;
+
+const SubContainerIndividualMenu = styled.div`
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 350px);
     gap: 20px;
-    padding: 10% 0;
 
-    @media (max-width: 1500PX) {
+    @media (max-width: 1500px) {
         grid-template-columns: repeat(3, 300px);
     }
 
-    @media (max-width: 1000PX) {
+    @media (max-width: 1000px) {
         grid-template-columns: repeat(3, 250px);
     }
 
-    
-    @media (max-width: 850PX) {
+    @media (max-width: 850px) {
         grid-template-columns: repeat(2, 300px);
     }
 
-    
-    @media (max-width: 650PX) {
+    @media (max-width: 650px) {
         grid-template-columns: repeat(2, 250px);
     }
 
-    @media (max-width: 550PX) {
+    @media (max-width: 550px) {
         grid-template-columns: repeat(1, 300px);
     }
 
-    
-    @media (max-width: 350PX) {
+    @media (max-width: 350px) {
         grid-template-columns: repeat(1, 1fr);
     }
 `;
-
-const TitleMenu = styled.h1``;
-
-const SubDivMenu = styled.div``;

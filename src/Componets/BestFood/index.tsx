@@ -62,7 +62,6 @@ const TitleBestFood = styled.h1`
     @media (max-width: 500px) {
         font-size: 10vw;
     }
-
 `;
 
 const BestFoodSubContainer = styled.div`
