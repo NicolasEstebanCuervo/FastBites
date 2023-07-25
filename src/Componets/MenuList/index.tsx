@@ -168,11 +168,11 @@ const ContainerIndividualMenu = styled.div`
 `;
 
 const TitleSection = styled.h1`
-    font-size: 30px;
+    font-size: 35px;
     padding: 2% 2%;
     
     @media (max-width: 500px) {
-        font-size: 6vw;
+        font-size: 6.5vw;
     }
 `;
 

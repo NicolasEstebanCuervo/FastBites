@@ -2,7 +2,7 @@ import NavBar from "../../Componets/NavBar";
 import styled from "@emotion/styled";
 import Footer from "../../Componets/Footer";
 import  MenuList  from "../../Componets/MenuList";
-import { Carrito } from "../../Componets/NavBar/carrito";
+import { Cart } from "../../Componets/NavBar/cart";
 
 function Menu() {
     return (
@@ -10,7 +10,7 @@ function Menu() {
             <SubContainerIndex>
                 <NavBar />
                 <MenuList/>
-                <Carrito/>
+                <Cart/>
             </SubContainerIndex>
             <Footer />
         </main>

@@ -42,30 +42,6 @@ const data = {
             quantity: 1,
             image: require("../../Assets/Images/Hamburguer.png"),
         },
-        {
-            id: 6,
-            title: "Spicy Jalapeño Burger",
-            price: 55,
-            category: "hamburguer",
-            quantity: 1,
-            image: require("../../Assets/Images/Hamburguer.png"),
-        },
-        {
-            id: 7,
-            title: "Mushroom Swiss Burger",
-            price: 60,
-            category: "hamburguer",
-            quantity: 1,
-            image: require("../../Assets/Images/Hamburguer.png"),
-        },
-        {
-            id: 8,
-            title: "Avocado Turkey Burger",
-            price: 65,
-            category: "hamburguer",
-            quantity: 1,
-            image: require("../../Assets/Images/Hamburguer.png"),
-        },
 
         // Chicken (8 items)
         {
@@ -80,14 +56,6 @@ const data = {
             id: 10,
             title: "Grilled Chicken Sandwich",
             price: 50,
-            category: "chicken",
-            quantity: 1,
-            image: require("../../Assets/Images/RiedChicken.png"),
-        },
-        {
-            id: 11,
-            title: "Honey Mustard Chicken Wrap",
-            price: 55,
             category: "chicken",
             quantity: 1,
             image: require("../../Assets/Images/RiedChicken.png"),
@@ -116,22 +84,6 @@ const data = {
             quantity: 1,
             image: require("../../Assets/Images/RiedChicken.png"),
         },
-        {
-            id: 15,
-            title: "Chicken Parmesan Sandwich",
-            price: 55,
-            category: "chicken",
-            quantity: 1,
-            image: require("../../Assets/Images/RiedChicken.png"),
-        },
-        {
-            id: 16,
-            title: "Garlic Butter Chicken Burger",
-            price: 60,
-            category: "chicken",
-            quantity: 1,
-            image: require("../../Assets/Images/RiedChicken.png"),
-        },
 
         // Tacos (8 items)
         {
@@ -146,14 +98,6 @@ const data = {
             id: 18,
             title: "Carnitas Street Tacos",
             price: 50,
-            category: "tacos",
-            quantity: 1,
-            image: require("../../Assets/Images/Tacos.png"),
-        },
-        {
-            id: 19,
-            title: "Baja Fish Tacos",
-            price: 55,
             category: "tacos",
             quantity: 1,
             image: require("../../Assets/Images/Tacos.png"),
@@ -182,22 +126,7 @@ const data = {
             quantity: 1,
             image: require("../../Assets/Images/Tacos.png"),
         },
-        {
-            id: 23,
-            title: "Korean BBQ Beef Tacos",
-            price: 55,
-            category: "tacos",
-            quantity: 1,
-            image: require("../../Assets/Images/Tacos.png"),
-        },
-        {
-            id: 24,
-            title: "Buffalo Cauliflower Tacos",
-            price: 50,
-            category: "tacos",
-            quantity: 1,
-            image: require("../../Assets/Images/Tacos.png"),
-        },
+
 
         // Hot Dogs (8 items)
         {
@@ -212,14 +141,6 @@ const data = {
             id: 26,
             title: "Chili Cheese Hot Dog",
             price: 40,
-            category: "hot dog",
-            quantity: 1,
-            image: require("../../Assets/Images/HotDog.png"),
-        },
-        {
-            id: 27,
-            title: "Bacon Wrapped Hot Dog",
-            price: 45,
             category: "hot dog",
             quantity: 1,
             image: require("../../Assets/Images/HotDog.png"),
@@ -252,14 +173,6 @@ const data = {
             id: 31,
             title: "Korean Kimchi Hot Dog",
             price: 50,
-            category: "hot dog",
-            quantity: 1,
-            image: require("../../Assets/Images/HotDog.png"),
-        },
-        {
-            id: 32,
-            title: "Hawaiian Pineapple Hot Dog",
-            price: 45,
             category: "hot dog",
             quantity: 1,
             image: require("../../Assets/Images/HotDog.png"),
@@ -322,14 +235,6 @@ const data = {
             quantity: 1,
             image: require("../../Assets/Images/Burrito.png"),
         },
-        {
-            id: 40,
-            title: "Sweet Potato Black Bean Burrito",
-            price: 55,
-            category: "burritos",
-            quantity: 1,
-            image: require("../../Assets/Images/Burrito.png"),
-        },
 
         // Pizzas (8 items)
         {
@@ -384,14 +289,6 @@ const data = {
             id: 47,
             title: "Margarita Fresca",
             price: 65,
-            category: "pizza",
-            quantity: 1,
-            image: require("../../Assets/Images/Pizza.png"),
-        },
-        {
-            id: 48,
-            title: "Pesto Shrimp Delight",
-            price: 70,
             category: "pizza",
             quantity: 1,
             image: require("../../Assets/Images/Pizza.png"),
