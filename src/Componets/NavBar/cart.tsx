@@ -11,7 +11,7 @@ interface Product {
     quantity: number;
 }
 
-export const Cart: React.FC = () => {
+export const Cart = () => {
     const value = useContext(DataContext);
     const [menu, setMenu] = value.menu;
     const [cart, setCart] = value.cart;
@@ -71,37 +71,38 @@ export const Cart: React.FC = () => {
                                     </button>
                                 </QuantityButtons>
                                 <RemoveButton onClick={() => removeProduct(product.id)}>
-                                    <i className="bi bi-trash"></i>
+                                    <i className="bi bi-x"></i>
                                 </RemoveButton>
                             </QuantityContainer>
                         </CartItem>
                     ))}
+                    <TotalContainer>
+                        <TotalText>Total: ${total}</TotalText>
+                        <PaymentButton>Payment</PaymentButton>
+                    </TotalContainer>
                 </>
             )}
-            <TotalContainer>
-                <TotalText>Total: ${total}</TotalText>
-                <PaymentButton>Payment</PaymentButton>
-            </TotalContainer>
         </CartContainer>
     );
-}
+};
+
 const CartContainer = styled.div`
     background: #f2f2f2;
-    padding: 2% 0;
+    padding: 5% 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: auto;
     border-radius: 25px;
+    gap: 5vh;
 `;
 
 const TitleCart = styled.h1`
     font-size: 50px;
     text-align: center;
-    margin-bottom: 60px;
 
     @media (max-width: 500px) {
-        font-size: 10vw;
+        font-size: 8vw;
     }
 `;
 
@@ -112,14 +113,54 @@ const CartItem = styled.div`
     padding: 3% 5%;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     border-radius: 8px;
+    gap: 1%;
+    position: relative;
 `;
 
 const ProductImage = styled.img`
-    width: 150px;
+    width: 100%;
+    margin-right: 1%;
+    border-radius: 25px;
+    max-width: 150px;
     height: 150px;
-    margin-right: 10px;
+    border-radius: 2vw;
+
+    @media (max-width: 800px) {
+        max-width: 100px;
+        height: 100px;
+    }
+
+    @media (max-width: 700px) {
+        max-width: 80px;
+        height: 80px;
+    }
+
+    @media (max-width: 400px) {
+        max-width: 70px;
+        height: 70px;
+    }
+
+    @media (max-width: 350px) {
+        max-width: 60px;
+        height: 60px;
+    }
+
+    @media (max-width: 300px) {
+        max-width: 50px;
+        height: 50px;
+    }
+
+    @media (max-width: 250px) {
+        max-width: 40px;
+        height: 40px;
+    }
+
+    @media (max-width: 60px) {
+        max-width: 10px;
+        height: 10px;
+    }
 `;
 
 const ProductInfo = styled.div`
@@ -127,11 +168,43 @@ const ProductInfo = styled.div`
 `;
 
 const ProductTitle = styled.h1`
-    font-size: 20px;
+    font-size: 25px;
+
+    @media (max-width: 800px) {
+        font-size: 3vw;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 3.5vw;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 4vw;
+    }
+
+    @media (max-width: 300px) {
+        font-size: 5vw;
+    }
 `;
 
 const ProductPrice = styled.p`
-    font-size: 18px;
+    font-size: 20px;
+    
+    @media (max-width: 800px) {
+        font-size: 2.5vw;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 3vw;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 3.5vw;
+    }
+
+    @media (max-width: 300px) {
+        font-size: 5vw;
+    }
 `;
 
 const QuantityContainer = styled.div`
@@ -140,14 +213,28 @@ const QuantityContainer = styled.div`
 `;
 
 const RemoveButton = styled.button`
+    position: absolute;
+    top: 0;
+    right: 0;
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 25px;
-    margin-right: 10px;
-
+    font-size: 30px;
+        
     &:hover {
         transform: scale(1.2);
+    }
+
+    @media (max-width: 600px) {
+        font-size: 5vw;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 6vw;
+    }
+
+    @media (max-width: 300px) {
+        font-size: 8vw;
     }
 `;
 
@@ -155,27 +242,54 @@ const QuantityButtons = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    padding: 5px;
+    margin-right: 2vw;
+    gap: 10%;
+
+    @media (max-width: 800px) {
+        gap: 0px;
+        flex-direction: column-reverse;
+    }
 
     button {
         background: transparent;
         border: none;
         cursor: pointer;
-        font-size: 25px;
+        font-size: 35px;
         color: #333;
-        padding: 5px;
         display: flex;
         align-items: center;
-
+        
         &:hover {
-            background-color: #f0f0f0;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 600px) {
+            font-size: 5vw;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 6vw;
+        }
+
+        @media (max-width: 300px) {
+            font-size: 7vw;
         }
     }
 
     span {
         font-size: 30px;
-        margin: 0 10px;
+
+        @media (max-width: 600px) {
+            font-size: 4.5vw;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 6.5vw;
+        }
+
+        @media (max-width: 300px) {
+            font-size: 7.5vw;
+        }
     }
 `;
 
@@ -190,7 +304,6 @@ const TotalContainer = styled.div`
 
 const TotalText = styled.h1`
     font-size: 30px;
-    text-align: center;
     margin-bottom:10%;
 
     @media (max-width: 500px) {
@@ -210,9 +323,28 @@ const PaymentButton = styled.button`
     &:hover {
         background-color: #ffa500;
     }
+
+    @media (max-width: 1200PX) {
+        max-width: 260px;
+    }
+
+    @media (max-width: 1000PX) {
+        max-width: 200px;
+    }
+
+    @media (max-width: 300px) {
+        font-size: 6vw;
+        padding: 1vh 6vw;
+    }
 `;
 
 const EmptyCartMessage = styled.h1`
+    font-size: 30px;
     text-align: center;
-    font-size: 3rem;
+    margin-top: 5%;
+
+    @media (max-width: 500px) {
+        margin-top: 10%; 
+        font-size: 6vw;
+    }
 `;

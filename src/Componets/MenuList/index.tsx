@@ -153,6 +153,7 @@ const ContainerMenu = styled.div`
     padding: 10% 0;
     gap: 20px;
 `;
+
 const TitleMenu = styled.h1`
     font-size: 50px;
     text-align: center;

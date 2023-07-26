@@ -61,7 +61,6 @@ const FoodContainer = styled.div`
         width:300px;
     }
 
-    
     @media (max-width: 650PX) {
         width:250px;
     }
@@ -70,6 +69,9 @@ const FoodContainer = styled.div`
         width:300px;
     }
 
+    @media (max-width: 400PX) {
+        width:80vw;
+    }
 `;
 
 const ImageFood = styled.img`
@@ -95,6 +97,10 @@ const ImageFood = styled.img`
 
     @media (max-width: 550px) {
         max-width: 260px;
+    }
+
+    @media (max-width: 450px) {
+        max-width: 240px;
     }
     
     @media (max-width: 350px) {
@@ -154,7 +160,6 @@ const Button = styled.button`
     cursor: pointer;
     margin-top: 15px;
     font-weight: bold;
-
     
     @media (max-width: 1200PX) {
         max-width: 260px;
@@ -167,6 +172,5 @@ const Button = styled.button`
     @media (max-width: 300px) {
         font-size: 6vw;
         padding: 1vh 6vw;
-
     }
 `;
