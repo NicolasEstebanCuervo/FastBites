@@ -56,7 +56,6 @@ const FoodContainer = styled.div`
         width:250px;
     }
 
-    
     @media (max-width: 850PX) {
         width:300px;
     }

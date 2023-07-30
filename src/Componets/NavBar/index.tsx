@@ -1,20 +1,23 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import styled from "@emotion/styled";
+import { DataContext } from "../../Context/Context";
 import hamburguerIcon from "../../Assets/Icons/Hamburguer.svg";
 import hamburguerButton from "../../Assets/Icons/HamburguerButton.svg";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+    const value = useContext(DataContext);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [cartOpen, setCartOpen] = useState(false);
+    const [menu, setMenu] = value.menu;
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const toggleCart = () => {
-        setCartOpen(!cartOpen);
-    };
+    const toggleCart = () =>{
+        setMenu(!menu)
+    }
+    
     
     return (
         <Nav>
@@ -33,7 +36,7 @@ function NavBar() {
                     <MenuItem>
                         <StyledLink to="/Menu">Menu</StyledLink>
                     </MenuItem>
-                    <MenuItem onClick={toggleCart}>Trolley</MenuItem>
+                    <MenuItem onClick={toggleCart}><StyledLink to="">Trolley</StyledLink></MenuItem>
                 </Menu>
             </SubContainerNav>
         </Nav>
@@ -107,10 +110,8 @@ const Menu = styled.ul<MenuProps>`
 const MenuItem = styled.li`
     margin-left: 10px;
     flex: 1;
-
-    @media (max-width: 768px) {
-        margin-bottom: 10px;
-    }
+    color: #000;
+    text-decoration: none;
 `;
 
 const StyledLink = styled(Link)`

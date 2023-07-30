@@ -162,16 +162,22 @@ const TitleMenu = styled.h1`
     @media (max-width: 500px) {
         font-size: 10vw;
     }
+
 `;
 
 const ContainerIndividualMenu = styled.div`
     margin-bottom: 5%;
+
 `;
 
 const TitleSection = styled.h1`
     font-size: 35px;
     padding: 2% 2%;
-    
+
+    @media (max-width: 1200px) {
+        text-align: center;
+    }
+
     @media (max-width: 500px) {
         font-size: 6.5vw;
     }
@@ -184,7 +190,7 @@ const SubContainerIndividualMenu = styled.div`
     gap: 20px;
 
     @media (max-width: 1500px) {
-        grid-template-columns: repeat(3, 300px);
+        grid-template-columns: repeat(3, 350px);
     }
 
     @media (max-width: 1000px) {
@@ -200,10 +206,8 @@ const SubContainerIndividualMenu = styled.div`
     }
 
     @media (max-width: 550px) {
-        grid-template-columns: repeat(1, 300px);
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    @media (max-width: 350px) {
-        grid-template-columns: repeat(1, 1fr);
-    }
 `;

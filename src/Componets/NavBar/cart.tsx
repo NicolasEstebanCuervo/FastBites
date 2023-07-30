@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { DataContext } from "../../Context/Context";
 import styled from "@emotion/styled";
 
@@ -16,10 +16,6 @@ export const Cart = () => {
     const [menu, setMenu] = value.menu;
     const [cart, setCart] = value.cart;
     const [total] = value.total;
-
-    const toggleMenu = () => {
-        setMenu(false);
-    };
 
     const reduceQuantity = (id: number) => {
         cart.forEach((item: Product) => {
@@ -47,42 +43,70 @@ export const Cart = () => {
     };
 
     return (
-        <CartContainer>
-            <TitleCart>Your Cart</TitleCart>
-            {cart.length === 0 ? (
-                <EmptyCartMessage>Empty Cart</EmptyCartMessage>
+        <>
+            {menu ? (
+                <CartContainer>
+                    <RemoveButtonCart onClick={() => setMenu(false)}>
+                        <i className="bi bi-x"></i>
+                    </RemoveButtonCart>
+                    <TitleCart>Your Cart</TitleCart>
+                    {cart.length === 0 ? (
+                        <EmptyCartMessage>Empty Cart</EmptyCartMessage>
+                    ) : (
+                        <>
+                            {cart.map((product: Product) => (
+                                <CartItem key={product.id}>
+                                    <ProductImage
+                                        src={product.image}
+                                        alt={product.title}
+                                    />
+                                    <ProductInfo>
+                                        <ProductTitle>
+                                            {product.title}
+                                        </ProductTitle>
+                                        <ProductPrice>
+                                            ${product.price}
+                                        </ProductPrice>
+                                    </ProductInfo>
+                                    <QuantityContainer>
+                                        <QuantityButtons>
+                                            <button
+                                                onClick={() =>
+                                                    reduceQuantity(product.id)
+                                                }
+                                            >
+                                                <i className="bi bi-arrow-down"></i>
+                                            </button>
+                                            <span>{product.quantity}</span>
+                                            <button
+                                                onClick={() =>
+                                                    increaseQuantity(product.id)
+                                                }
+                                            >
+                                                <i className="bi bi-arrow-up"></i>
+                                            </button>
+                                        </QuantityButtons>
+                                        <RemoveButtonProduct
+                                            onClick={() =>
+                                                removeProduct(product.id)
+                                            }
+                                        >
+                                            <i className="bi bi-x"></i>
+                                        </RemoveButtonProduct>
+                                    </QuantityContainer>
+                                </CartItem>
+                            ))}
+                            <TotalContainer>
+                                <TotalText>Total: ${total}</TotalText>
+                                <PaymentButton>Payment</PaymentButton>
+                            </TotalContainer>
+                        </>
+                    )}
+                </CartContainer>
             ) : (
-                <>
-                    {cart.map((product: Product) => (
-                        <CartItem key={product.id}>
-                            <ProductImage src={product.image} alt={product.title} />
-                            <ProductInfo>
-                                <ProductTitle>{product.title}</ProductTitle>
-                                <ProductPrice>${product.price}</ProductPrice>
-                            </ProductInfo>
-                            <QuantityContainer>
-                                <QuantityButtons>
-                                    <button onClick={() => reduceQuantity(product.id)}>
-                                        <i className="bi bi-arrow-down"></i>
-                                    </button>
-                                    <span>{product.quantity}</span>
-                                    <button onClick={() => increaseQuantity(product.id)}>
-                                        <i className="bi bi-arrow-up"></i>
-                                    </button>
-                                </QuantityButtons>
-                                <RemoveButton onClick={() => removeProduct(product.id)}>
-                                    <i className="bi bi-x"></i>
-                                </RemoveButton>
-                            </QuantityContainer>
-                        </CartItem>
-                    ))}
-                    <TotalContainer>
-                        <TotalText>Total: ${total}</TotalText>
-                        <PaymentButton>Payment</PaymentButton>
-                    </TotalContainer>
-                </>
+                <br></br>
             )}
-        </CartContainer>
+        </>
     );
 };
 
@@ -91,10 +115,38 @@ const CartContainer = styled.div`
     padding: 5% 0;
     display: flex;
     align-items: center;
+    position: relative;
     flex-direction: column;
     margin: auto;
     border-radius: 25px;
     gap: 5vh;
+    margin-top: 10%;
+`;
+
+const RemoveButtonCart = styled.button`
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5%;
+    right: 0.5%;
+    font-size: 30px;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    @media (max-width: 600px) {
+        font-size: 5vw;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 6vw;
+    }
+
+    @media (max-width: 300px) {
+        font-size: 8vw;
+    }
 `;
 
 const TitleCart = styled.h1`
@@ -189,7 +241,7 @@ const ProductTitle = styled.h1`
 
 const ProductPrice = styled.p`
     font-size: 20px;
-    
+
     @media (max-width: 800px) {
         font-size: 2.5vw;
     }
@@ -212,7 +264,7 @@ const QuantityContainer = styled.div`
     align-items: center;
 `;
 
-const RemoveButton = styled.button`
+const RemoveButtonProduct = styled.button`
     position: absolute;
     top: 0;
     right: 0;
@@ -220,7 +272,7 @@ const RemoveButton = styled.button`
     border: none;
     cursor: pointer;
     font-size: 30px;
-        
+
     &:hover {
         transform: scale(1.2);
     }
@@ -258,7 +310,7 @@ const QuantityButtons = styled.div`
         color: #333;
         display: flex;
         align-items: center;
-        
+
         &:hover {
             transform: scale(1.2);
         }
@@ -304,7 +356,7 @@ const TotalContainer = styled.div`
 
 const TotalText = styled.h1`
     font-size: 30px;
-    margin-bottom:10%;
+    margin-bottom: 10%;
 
     @media (max-width: 500px) {
         font-size: 8vw;
@@ -324,11 +376,11 @@ const PaymentButton = styled.button`
         background-color: #ffa500;
     }
 
-    @media (max-width: 1200PX) {
+    @media (max-width: 1200px) {
         max-width: 260px;
     }
 
-    @media (max-width: 1000PX) {
+    @media (max-width: 1000px) {
         max-width: 200px;
     }
 
@@ -344,7 +396,7 @@ const EmptyCartMessage = styled.h1`
     margin-top: 5%;
 
     @media (max-width: 500px) {
-        margin-top: 10%; 
+        margin-top: 10%;
         font-size: 6vw;
     }
 `;

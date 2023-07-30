@@ -9,8 +9,8 @@ function Menu() {
         <main>
             <SubContainerIndex>
                 <NavBar />
-                <MenuList/>
                 <Cart/>
+                <MenuList/>
             </SubContainerIndex>
             <Footer />
         </main>

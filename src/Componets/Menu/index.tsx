@@ -5,7 +5,7 @@ import Tacos from "../../Assets/Images/Tacos.png";
 import Burrito from "../../Assets/Images/Burrito.png";
 import RiedChicken from "../../Assets/Images/RiedChicken.png";
 import HotDog from "../../Assets/Images/HotDog.png";
-
+import { Link } from "react-router-dom";
 
 function Menu() {
     return (
@@ -20,7 +20,7 @@ function Menu() {
                         asperiores. At cupiditate, odio reprehenderit repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button>See more</Button>
+                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -33,7 +33,7 @@ function Menu() {
                         asperiores. At cupiditate, odio reprehenderit repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button>See more</Button>
+                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -46,7 +46,7 @@ function Menu() {
                         asperiores. At cupiditate, odio reprehenderit repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button>See more</Button>
+                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -59,7 +59,7 @@ function Menu() {
                         asperiores. At cupiditate, odio reprehenderit repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button>See more</Button>
+                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -72,7 +72,7 @@ function Menu() {
                         asperiores. At cupiditate, odio reprehenderit repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button>See more</Button>
+                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -85,7 +85,7 @@ function Menu() {
                         asperiores. At cupiditate, odio reprehenderit repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button>See more</Button>
+                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
             </FoodContainer>
         </MenuContainer>
     );
@@ -176,7 +176,6 @@ const ImageFood = styled.img`
     }
 `;
 
-
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -184,6 +183,7 @@ const TextContainer = styled.div`
     align-items: center;
     text-align: center;
 `;
+
 const TitleFood = styled.h1`
     font-size: 24px;
     margin-top: 10px;
@@ -195,6 +195,11 @@ const TitleFood = styled.h1`
     @media (max-width: 400px) {
         font-size: 7vw;
     }
+`;
+
+const StyledLink = styled(Link)`
+    color: #000;
+    text-decoration: none;
 `;
 
 const DescriptionFood = styled.p`
