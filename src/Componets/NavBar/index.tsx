@@ -19,15 +19,18 @@ function NavBar() {
     }
     
     return (
-        <Nav>
-            <Logo src={hamburguerIcon} alt="Hamburguer Icon" />
+        <Nav open={menuOpen}>
             <SubContainerNav>
-                <HamburgerButton onClick={toggleMenu}>
-                    <HamburgerIcon
-                        src={hamburguerButton}
-                        alt="Hamburguer Icon"
-                    />
-                </HamburgerButton>
+                <ContainerIcons>
+                    <Logo src={hamburguerIcon} alt="Hamburguer Icon" />
+                    
+                    <HamburgerButton onClick={toggleMenu}>
+                        <HamburgerIcon
+                            src={hamburguerButton}
+                            alt="Hamburguer Icon"
+                        />
+                    </HamburgerButton>
+                </ContainerIcons>
                 <Menu open={menuOpen}>
                     <MenuItem>
                         <StyledLink to="/">Home</StyledLink>
@@ -44,7 +47,11 @@ function NavBar() {
 
 export default NavBar;
 
-const Nav = styled.nav`
+interface MenuProps {
+    open: boolean;
+}
+
+const Nav = styled.nav<MenuProps>`
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -52,23 +59,38 @@ const Nav = styled.nav`
 
     @media (max-width: 768px) {
         align-items: flex-start;
+        background: #f2f2f2;
     }
+`;
+
+const ContainerIcons = styled.div`
+    display: flex;
+    justify-content: space-between;
 `;
 
 const Logo = styled.img`
     width: 40px;
     height: 40px;
+
+    @media (max-width: 400px) {
+        width: 15vw;
+    }
 `;
 
 const SubContainerNav = styled.div`
-    width: 30%;
+    width: 100%;
     gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @media (max-width: 768px) {
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: normal;
     }
+
 `;
 
 const HamburgerButton = styled.button`
@@ -87,30 +109,39 @@ const HamburgerButton = styled.button`
 const HamburgerIcon = styled.img`
     width: 30px;
     height: 30px;
-`;
 
-interface MenuProps {
-    open: boolean;
-}
+    @media (max-width: 400px) {
+        width: 15vw;
+    }
+`;
 
 const Menu = styled.ul<MenuProps>`
     display: flex;
     list-style: none;
+
     @media (max-width: 768px) {
         flex-direction: column;
-        padding: 2% 5%;
-        background: #f2f2f2;
-        width: 100%;
-        align-items: flex-end;
+        align-items: center;
+        gap: 5%;
+        padding-bottom: 5%;
         display: ${({ open }) => (open ? "flex" : "none")};
     }
 `;
 
 const MenuItem = styled.li`
-    margin-left: 10px;
+    margin-left: 40px;
     flex: 1;
     color: #000;
     text-decoration: none;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 5vw;
+    }
 `;
 
 const StyledLink = styled(Link)`
