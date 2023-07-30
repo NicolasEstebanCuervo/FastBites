@@ -18,7 +18,6 @@ function NavBar() {
         setMenu(!menu)
     }
     
-    
     return (
         <Nav>
             <Logo src={hamburguerIcon} alt="Hamburguer Icon" />

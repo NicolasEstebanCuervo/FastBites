@@ -15,12 +15,15 @@ function Menu() {
                 <TextContainer>
                     <TitleFood>Hamburguesa</TitleFood>
                     <DescriptionFood>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Pariatur laboriosam quo doloremque nemo eos corrupti
-                        asperiores. At cupiditate, odio reprehenderit repellendus
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Pariatur laboriosam quo doloremque nemo eos
+                        corrupti asperiores. At cupiditate, odio reprehenderit
+                        repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
+                <Button>
+                    <StyledLink to="/Menu">Hamburguer</StyledLink>
+                </Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -28,12 +31,15 @@ function Menu() {
                 <TextContainer>
                     <TitleFood>Pizza</TitleFood>
                     <DescriptionFood>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Pariatur laboriosam quo doloremque nemo eos corrupti
-                        asperiores. At cupiditate, odio reprehenderit repellendus
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Pariatur laboriosam quo doloremque nemo eos
+                        corrupti asperiores. At cupiditate, odio reprehenderit
+                        repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
+                <Button>
+                    <StyledLink to="/Menu">Pizza</StyledLink>
+                </Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -41,12 +47,15 @@ function Menu() {
                 <TextContainer>
                     <TitleFood>Tacos</TitleFood>
                     <DescriptionFood>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Pariatur laboriosam quo doloremque nemo eos corrupti
-                        asperiores. At cupiditate, odio reprehenderit repellendus
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Pariatur laboriosam quo doloremque nemo eos
+                        corrupti asperiores. At cupiditate, odio reprehenderit
+                        repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
+                <Button>
+                    <StyledLink to="/Menu">Tacos</StyledLink>
+                </Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -54,12 +63,15 @@ function Menu() {
                 <TextContainer>
                     <TitleFood>Burritos</TitleFood>
                     <DescriptionFood>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Pariatur laboriosam quo doloremque nemo eos corrupti
-                        asperiores. At cupiditate, odio reprehenderit repellendus
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Pariatur laboriosam quo doloremque nemo eos
+                        corrupti asperiores. At cupiditate, odio reprehenderit
+                        repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
+                <Button>
+                    <StyledLink to="/Menu">Burrito</StyledLink>
+                </Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -67,12 +79,15 @@ function Menu() {
                 <TextContainer>
                     <TitleFood>RiedChicken</TitleFood>
                     <DescriptionFood>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Pariatur laboriosam quo doloremque nemo eos corrupti
-                        asperiores. At cupiditate, odio reprehenderit repellendus
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Pariatur laboriosam quo doloremque nemo eos
+                        corrupti asperiores. At cupiditate, odio reprehenderit
+                        repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
+                <Button>
+                    <StyledLink to="/Menu">Ried Chicken</StyledLink>
+                </Button>
             </FoodContainer>
 
             <FoodContainer>
@@ -80,12 +95,15 @@ function Menu() {
                 <TextContainer>
                     <TitleFood>Hot Dog</TitleFood>
                     <DescriptionFood>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Pariatur laboriosam quo doloremque nemo eos corrupti
-                        asperiores. At cupiditate, odio reprehenderit repellendus
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Pariatur laboriosam quo doloremque nemo eos
+                        corrupti asperiores. At cupiditate, odio reprehenderit
+                        repellendus
                     </DescriptionFood>
                 </TextContainer>
-                <Button><StyledLink to="/Menu">Hamburguer</StyledLink></Button>
+                <Button>
+                    <StyledLink to="/Menu">HotDog</StyledLink>
+                </Button>
             </FoodContainer>
         </MenuContainer>
     );
@@ -100,30 +118,27 @@ const MenuContainer = styled.section`
     gap: 20px;
     padding: 10% 0;
 
-    @media (max-width: 1200PX) {
+    @media (max-width: 1200px) {
         grid-template-columns: repeat(3, 300px);
     }
 
-    @media (max-width: 1000PX) {
+    @media (max-width: 1000px) {
         grid-template-columns: repeat(3, 250px);
     }
 
-    
-    @media (max-width: 850PX) {
+    @media (max-width: 850px) {
         grid-template-columns: repeat(2, 300px);
     }
 
-    
-    @media (max-width: 650PX) {
+    @media (max-width: 650px) {
         grid-template-columns: repeat(2, 250px);
     }
 
-    @media (max-width: 550PX) {
+    @media (max-width: 550px) {
         grid-template-columns: repeat(1, 300px);
     }
 
-    
-    @media (max-width: 350PX) {
+    @media (max-width: 350px) {
         grid-template-columns: repeat(1, 1fr);
     }
 `;
@@ -162,7 +177,7 @@ const ImageFood = styled.img`
     @media (max-width: 550px) {
         max-width: 260px;
     }
-    
+
     @media (max-width: 350px) {
         max-width: 200px;
     }
@@ -187,8 +202,8 @@ const TextContainer = styled.div`
 const TitleFood = styled.h1`
     font-size: 24px;
     margin-top: 10px;
-    
-    @media (max-width: 1000PX) {
+
+    @media (max-width: 1000px) {
         font-size: 20px;
     }
 
@@ -207,7 +222,7 @@ const DescriptionFood = styled.p`
     margin-top: 5px;
     max-width: 80%;
 
-    @media (max-width: 1000PX) {
+    @media (max-width: 1000px) {
         font-size: 15px;
     }
 
@@ -217,7 +232,7 @@ const DescriptionFood = styled.p`
 `;
 
 const Button = styled.button`
-    background-color: #F9C80E;
+    background-color: #f9c80e;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -226,18 +241,16 @@ const Button = styled.button`
     margin-top: 15px;
     font-weight: bold;
 
-    
-    @media (max-width: 1200PX) {
+    @media (max-width: 1200px) {
         max-width: 260px;
     }
 
-    @media (max-width: 1000PX) {
+    @media (max-width: 1000px) {
         max-width: 200px;
     }
 
     @media (max-width: 300px) {
         font-size: 6vw;
         padding: 1vh 6vw;
-
     }
 `;
