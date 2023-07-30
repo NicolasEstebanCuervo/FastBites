@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import Hamburguer from "../../Assets/Images/Hamburguer.png";
-import Pizza from "../../Assets/Images/Pizza.png";
-import Tacos from "../../Assets/Images/Tacos.png";
-import Burrito from "../../Assets/Images/Burrito.png";
-import RiedChicken from "../../Assets/Images/RiedChicken.png";
-import HotDog from "../../Assets/Images/HotDog.png";
+import Hamburguer from "../../Assets/Images/Hamburguer.webp";
+import Pizza from "../../Assets/Images/Pizza.webp";
+import Tacos from "../../Assets/Images/Tacos.webp";
+import Burrito from "../../Assets/Images/Burrito.webp";
+import RiedChicken from "../../Assets/Images/RiedChicken.webp";
+import HotDog from "../../Assets/Images/HotDog.webp";
 import { Link } from "react-router-dom";
 
 function Menu() {

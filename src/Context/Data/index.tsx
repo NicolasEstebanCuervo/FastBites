@@ -8,7 +8,7 @@ const data = {
             price: 50,
             category: "hamburguer",
             quantity: 1,
-            image: require("../../Assets/Images/Hamburguer.png"),
+            image: require("../../Assets/Images/Hamburguer.webp"),
         },
         {
             id: 2,
@@ -16,7 +16,7 @@ const data = {
             price: 55,
             category: "hamburguer",
             quantity: 1,
-            image: require("../../Assets/Images/Hamburguer.png"),
+            image: require("../../Assets/Images/Hamburguer.webp"),
         },
         {
             id: 3,
@@ -24,7 +24,7 @@ const data = {
             price: 60,
             category: "hamburguer",
             quantity: 1,
-            image: require("../../Assets/Images/Hamburguer.png"),
+            image: require("../../Assets/Images/Hamburguer.webp"),
         },
         {
             id: 4,
@@ -32,7 +32,7 @@ const data = {
             price: 65,
             category: "hamburguer",
             quantity: 1,
-            image: require("../../Assets/Images/Hamburguer.png"),
+            image: require("../../Assets/Images/Hamburguer.webp"),
         },
         {
             id: 5,
@@ -40,7 +40,7 @@ const data = {
             price: 50,
             category: "hamburguer",
             quantity: 1,
-            image: require("../../Assets/Images/Hamburguer.png"),
+            image: require("../../Assets/Images/Hamburguer.webp"),
         },
 
         // Chicken (8 items)
@@ -50,7 +50,7 @@ const data = {
             price: 60,
             category: "chicken",
             quantity: 1,
-            image: require("../../Assets/Images/RiedChicken.png"),
+            image: require("../../Assets/Images/RiedChicken.webp"),
         },
         {
             id: 10,
@@ -58,7 +58,7 @@ const data = {
             price: 50,
             category: "chicken",
             quantity: 1,
-            image: require("../../Assets/Images/RiedChicken.png"),
+            image: require("../../Assets/Images/RiedChicken.webp"),
         },
         {
             id: 12,
@@ -66,7 +66,7 @@ const data = {
             price: 65,
             category: "chicken",
             quantity: 1,
-            image: require("../../Assets/Images/RiedChicken.png"),
+            image: require("../../Assets/Images/RiedChicken.webp"),
         },
         {
             id: 13,
@@ -74,7 +74,7 @@ const data = {
             price: 60,
             category: "chicken",
             quantity: 1,
-            image: require("../../Assets/Images/RiedChicken.png"),
+            image: require("../../Assets/Images/RiedChicken.webp"),
         },
         {
             id: 14,
@@ -82,7 +82,7 @@ const data = {
             price: 70,
             category: "chicken",
             quantity: 1,
-            image: require("../../Assets/Images/RiedChicken.png"),
+            image: require("../../Assets/Images/RiedChicken.webp"),
         },
 
         // Tacos (8 items)
@@ -92,7 +92,7 @@ const data = {
             price: 45,
             category: "tacos",
             quantity: 1,
-            image: require("../../Assets/Images/Tacos.png"),
+            image: require("../../Assets/Images/Tacos.webp"),
         },
         {
             id: 18,
@@ -100,7 +100,7 @@ const data = {
             price: 50,
             category: "tacos",
             quantity: 1,
-            image: require("../../Assets/Images/Tacos.png"),
+            image: require("../../Assets/Images/Tacos.webp"),
         },
         {
             id: 20,
@@ -108,7 +108,7 @@ const data = {
             price: 60,
             category: "tacos",
             quantity: 1,
-            image: require("../../Assets/Images/Tacos.png"),
+            image: require("../../Assets/Images/Tacos.webp"),
         },
         {
             id: 21,
@@ -116,7 +116,7 @@ const data = {
             price: 50,
             category: "tacos",
             quantity: 1,
-            image: require("../../Assets/Images/Tacos.png"),
+            image: require("../../Assets/Images/Tacos.webp"),
         },
         {
             id: 22,
@@ -124,7 +124,7 @@ const data = {
             price: 45,
             category: "tacos",
             quantity: 1,
-            image: require("../../Assets/Images/Tacos.png"),
+            image: require("../../Assets/Images/Tacos.webp"),
         },
 
 
@@ -135,7 +135,7 @@ const data = {
             price: 35,
             category: "hot dog",
             quantity: 1,
-            image: require("../../Assets/Images/HotDog.png"),
+            image: require("../../Assets/Images/HotDog.webp"),
         },
         {
             id: 26,
@@ -143,7 +143,7 @@ const data = {
             price: 40,
             category: "hot dog",
             quantity: 1,
-            image: require("../../Assets/Images/HotDog.png"),
+            image: require("../../Assets/Images/HotDog.webp"),
         },
         {
             id: 28,
@@ -151,7 +151,7 @@ const data = {
             price: 50,
             category: "hot dog",
             quantity: 1,
-            image: require("../../Assets/Images/HotDog.png"),
+            image: require("../../Assets/Images/HotDog.webp"),
         },
         {
             id: 29,
@@ -159,7 +159,7 @@ const data = {
             price: 40,
             category: "hot dog",
             quantity: 1,
-            image: require("../../Assets/Images/HotDog.png"),
+            image: require("../../Assets/Images/HotDog.webp"),
         },
         {
             id: 30,
@@ -167,7 +167,7 @@ const data = {
             price: 45,
             category: "hot dog",
             quantity: 1,
-            image: require("../../Assets/Images/HotDog.png"),
+            image: require("../../Assets/Images/HotDog.webp"),
         },
         {
             id: 31,
@@ -175,7 +175,7 @@ const data = {
             price: 50,
             category: "hot dog",
             quantity: 1,
-            image: require("../../Assets/Images/HotDog.png"),
+            image: require("../../Assets/Images/HotDog.webp"),
         },
 
         // Burritos (8 items)
@@ -185,7 +185,7 @@ const data = {
             price: 55,
             category: "burritos",
             quantity: 1,
-            image: require("../../Assets/Images/Burrito.png"),
+            image: require("../../Assets/Images/Burrito.webp"),
         },
         {
             id: 34,
@@ -193,7 +193,7 @@ const data = {
             price: 60,
             category: "burritos",
             quantity: 1,
-            image: require("../../Assets/Images/Burrito.png"),
+            image: require("../../Assets/Images/Burrito.webp"),
         },
         {
             id: 35,
@@ -201,7 +201,7 @@ const data = {
             price: 65,
             category: "burritos",
             quantity: 1,
-            image: require("../../Assets/Images/Burrito.png"),
+            image: require("../../Assets/Images/Burrito.webp"),
         },
         {
             id: 36,
@@ -209,7 +209,7 @@ const data = {
             price: 55,
             category: "burritos",
             quantity: 1,
-            image: require("../../Assets/Images/Burrito.png"),
+            image: require("../../Assets/Images/Burrito.webp"),
         },
         {
             id: 37,
@@ -217,7 +217,7 @@ const data = {
             price: 50,
             category: "burritos",
             quantity: 1,
-            image: require("../../Assets/Images/Burrito.png"),
+            image: require("../../Assets/Images/Burrito.webp"),
         },
         {
             id: 38,
@@ -225,7 +225,7 @@ const data = {
             price: 60,
             category: "burritos",
             quantity: 1,
-            image: require("../../Assets/Images/Burrito.png"),
+            image: require("../../Assets/Images/Burrito.webp"),
         },
         {
             id: 39,
@@ -233,7 +233,7 @@ const data = {
             price: 65,
             category: "burritos",
             quantity: 1,
-            image: require("../../Assets/Images/Burrito.png"),
+            image: require("../../Assets/Images/Burrito.webp"),
         },
 
         // Pizzas (8 items)
@@ -243,7 +243,7 @@ const data = {
             price: 70,
             category: "pizza",
             quantity: 1,
-            image: require("../../Assets/Images/Pizza.png"),
+            image: require("../../Assets/Images/Pizza.webp"),
         },
         {
             id: 42,
@@ -251,7 +251,7 @@ const data = {
             price: 60,
             category: "pizza",
             quantity: 1,
-            image: require("../../Assets/Images/Pizza.png"),
+            image: require("../../Assets/Images/Pizza.webp"),
         },
         {
             id: 43,
@@ -259,7 +259,7 @@ const data = {
             price: 65,
             category: "pizza",
             quantity: 1,
-            image: require("../../Assets/Images/Pizza.png"),
+            image: require("../../Assets/Images/Pizza.webp"),
         },
         {
             id: 44,
@@ -267,7 +267,7 @@ const data = {
             price: 70,
             category: "pizza",
             quantity: 1,
-            image: require("../../Assets/Images/Pizza.png"),
+            image: require("../../Assets/Images/Pizza.webp"),
         },
         {
             id: 45,
@@ -275,7 +275,7 @@ const data = {
             price: 55,
             category: "pizza",
             quantity: 1,
-            image: require("../../Assets/Images/Pizza.png"),
+            image: require("../../Assets/Images/Pizza.webp"),
         },
         {
             id: 46,
@@ -283,7 +283,7 @@ const data = {
             price: 60,
             category: "pizza",
             quantity: 1,
-            image: require("../../Assets/Images/Pizza.png"),
+            image: require("../../Assets/Images/Pizza.webp"),
         },
         {
             id: 47,
@@ -291,7 +291,7 @@ const data = {
             price: 65,
             category: "pizza",
             quantity: 1,
-            image: require("../../Assets/Images/Pizza.png"),
+            image: require("../../Assets/Images/Pizza.webp"),
         },
     ],
 };

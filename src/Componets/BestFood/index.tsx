@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import HotDog from "../../Assets/Images/HotDog.png";
-import Pizza from "../../Assets/Images/Pizza.png";
+import HotDog from "../../Assets/Images/HotDog.webp";
+import Pizza from "../../Assets/Images/Pizza.webp";
 
 function BestFood() {
     return (
