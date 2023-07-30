@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 function Order() {
     return (
         <OrderContainer>
             <TitleOrder>Order Now!</TitleOrder>
             <SubtitleOrder>Feeling hungry? Don't wait any longer! Order your favorite fast food and let us deliver it to you.</SubtitleOrder>
-            <ButtonOrder>Place Order</ButtonOrder>
+            <ButtonOrder><StyledLink to="/Menu">Place order</StyledLink></ButtonOrder>
         </OrderContainer>
     );
 }
@@ -66,3 +67,7 @@ const ButtonOrder = styled.button`
 
     }
 `
+const StyledLink = styled(Link)`
+    color: #000;
+    text-decoration: none;
+`;
