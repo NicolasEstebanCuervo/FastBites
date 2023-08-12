@@ -1,14 +1,14 @@
 import { DataProvider } from "../Context/Context";
-import Index from "./IndexPage";
+import IndexPage from "./IndexPage";
 import Menu from "./MenuPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const Page = () => {
+const Index = () => {
     return (
         <DataProvider>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Index></Index>}></Route>
+                    <Route path="/" element={<IndexPage></IndexPage>}></Route>
                     <Route path="/Menu" element={<Menu></Menu>}></Route>
                 </Routes>
             </BrowserRouter>
@@ -16,4 +16,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default Index;

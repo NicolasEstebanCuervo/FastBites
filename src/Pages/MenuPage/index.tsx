@@ -11,11 +11,11 @@ function Menu() {
     }, []);
     return (
         <main>
-            <SubContainerIndex>
+            <SubContainerMenu>
                 <NavBar />
                 <Cart/>
                 <MenuList/>
-            </SubContainerIndex>
+            </SubContainerMenu>
             <Footer />
         </main>
     );
@@ -23,7 +23,7 @@ function Menu() {
 
 export default Menu;
 
-const SubContainerIndex = styled.main`
+const SubContainerMenu = styled.main`
     width: 90%;
     margin: auto;
     padding: 3% 0;

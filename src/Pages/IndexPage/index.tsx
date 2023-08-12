@@ -7,7 +7,7 @@ import Menu from "../../Componets/Menu";
 import Order from "../../Componets/Order";
 import Footer from "../../Componets/Footer";
 
-function Index() {
+function IndexPage() {
     return (
         <main>
             <SubContainerIndex>
@@ -23,7 +23,7 @@ function Index() {
     );
 }
 
-export default Index;
+export default IndexPage;
 
 const SubContainerIndex = styled.main`
     width: 90%;

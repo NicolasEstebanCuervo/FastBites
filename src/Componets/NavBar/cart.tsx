@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DataContext } from "../../Context/Context";
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 interface Product {
     id: number;
@@ -98,7 +99,7 @@ export const Cart = () => {
                             ))}
                             <TotalContainer>
                                 <TotalText>Total: ${total}</TotalText>
-                                <PaymentButton>Payment</PaymentButton>
+                                <PaymentButton><StyledLink to="/Buy">Payment</StyledLink></PaymentButton>
                             </TotalContainer>
                         </>
                     )}
@@ -389,6 +390,12 @@ const PaymentButton = styled.button`
         padding: 1vh 6vw;
     }
 `;
+
+const StyledLink = styled(Link)`
+    color: #000;
+    text-decoration: none;
+`;
+
 
 const EmptyCartMessage = styled.h1`
     font-size: 30px;
