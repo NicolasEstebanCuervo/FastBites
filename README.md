@@ -38,7 +38,5 @@ en las dependencia del proyecto. Para solucionarlo abra la terminal del proyecto
 
 ###  📘 Librerias usadas:
    
-En caso tal de que te interese alguna de las librerias usadas aca te dejo una lista donde puedes encontrarlas:
-
-- Para este proyecto solo se necesito tener TypeScript instalado en el proyecto.
+Para este proyecto solo se necesito tener TypeScript instalado en el proyecto.
 
