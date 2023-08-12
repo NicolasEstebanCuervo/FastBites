@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+<div id="Header" align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+   <img src="https://media.giphy.com/media/K4x1ZL36xWCf6/giphy.gif" width="300">   
+   <h1 align="center">FastBites 🍕 - Finalizado </h1>
 
-## Available Scripts
+</div>
 
-In the project directory, you can run:
+### `💻 Proceso de instalacion usando git clone SSH`
 
-### `npm start`
+- Abra la terminal de su computador.
+- Entre al directorio de su preferencia usando (cd "nombre del directorio")
+- Si usted tiene una clave SSH ejecute el comando "git clone git@github.com:NicolasEstebanCuervo/FastBites.git"
+- Abra el repositorio clonado en su editor de codigo de preferencia.
+- En la terminal del editor de codigo ejecute el comando "npm start".
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `💻 Proceso de instalacion usando git clone HTTPS`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Abra la terminal de su computador.
+- Entre al directorio de su preferencia usando (cd "nombre del directorio")
+- Si usted no tiene una clave SSH tambien puede usar el metodo git clone con HHTTPS. Solamente tiene que ejecutar el comando "git clone https://github.com/NicolasEstebanCuervo/FastBites.git"
+- Abra el repositorio clonado en su editor de codigo de preferencia.
+- En la terminal del editor de codigo ejecute el comando "npm start".
 
-### `npm test`
+### `💻 Proceso de instalacion usando el archivo .zip`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Descargue el repositorio en el apartado "<>Code" con la opcion "Download ZIP"
+- Dele click derecho y extraer aqui. Espere hasta que el repositorio se haya extraido correctamente.
+- Abra la carpeta que se creo en su editor de codigo de preferencia.
+- En la terminal del editor de codigo ejecute el comando "npm start"
 
-### `npm run build`
+### `❌ Posible error al ejecutar el proyecto`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Si usted ejecuta el comando "npm start" Y le sale el siguien error "Error: Cannot find module 'react-scripts'" Esto puede ser debido a un error
+en las dependencia del proyecto. Para solucionarlo abra la terminal del proyecto y ejecute el siguiente comando "npm install react-scripts
+".
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###  📘 Librerias usadas:
+   
+En caso tal de que te interese alguna de las librerias usadas aca te dejo una lista donde puedes encontrarlas:
 
-### `npm run eject`
+- Para este proyecto solo se necesito tener TypeScript instalado en el proyecto.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
