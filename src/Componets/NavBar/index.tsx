@@ -1,9 +1,9 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import styled from "@emotion/styled";
 import { DataContext } from "../../Context/Context";
 import hamburguerIcon from "../../Assets/Icons/Hamburguer.svg";
 import hamburguerButton from "../../Assets/Icons/HamburguerButton.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
     const value = useContext(DataContext);
@@ -32,13 +32,13 @@ function NavBar() {
                     </HamburgerButton>
                 </ContainerIcons>
                 <Menu open={menuOpen}>
-                    <MenuItem>
-                        <StyledLink to="/">Home</StyledLink>
+                    <MenuItem  onClick={() => setMenu(false)} to="/">
+                        Home
                     </MenuItem>
-                    <MenuItem>
-                        <StyledLink to="/Menu">Menu</StyledLink>
+                    <MenuItem  onClick={() => setMenu(false)} to="/Menu">
+                       Menu
                     </MenuItem>
-                    <MenuItem onClick={toggleCart}><StyledLink to="">Trolley</StyledLink></MenuItem>
+                    <MenuItem onClick={toggleCart} to="">Trolley</MenuItem>
                 </Menu>
             </SubContainerNav>
         </Nav>
@@ -128,9 +128,11 @@ const Menu = styled.ul<MenuProps>`
     }
 `;
 
-const MenuItem = styled.li`
+const MenuItem = styled(Link)`
     margin-left: 40px;
     flex: 1;
+    color: #000;
+    text-decoration: none;
     color: #000;
     text-decoration: none;
 
@@ -142,9 +144,4 @@ const MenuItem = styled.li`
     @media (max-width: 400px) {
         font-size: 5vw;
     }
-`;
-
-const StyledLink = styled(Link)`
-    color: #000;
-    text-decoration: none;
 `;

@@ -99,7 +99,7 @@ export const Cart = () => {
                             ))}
                             <TotalContainer>
                                 <TotalText>Total: ${total}</TotalText>
-                                <PaymentButton><StyledLink to="/Buy">Payment</StyledLink></PaymentButton>
+                                <PaymentButton  onClick={() => setMenu(false)} to="/Pay">Payment</PaymentButton>
                             </TotalContainer>
                         </>
                     )}
@@ -364,7 +364,9 @@ const TotalText = styled.h1`
     }
 `;
 
-const PaymentButton = styled.button`
+const PaymentButton = styled(Link)`
+    color: #000;
+    text-decoration-line: none;
     background-color: #f9c80e;
     border: none;
     padding: 10px 20px;
@@ -390,12 +392,6 @@ const PaymentButton = styled.button`
         padding: 1vh 6vw;
     }
 `;
-
-const StyledLink = styled(Link)`
-    color: #000;
-    text-decoration: none;
-`;
-
 
 const EmptyCartMessage = styled.h1`
     font-size: 30px;
