@@ -141,6 +141,7 @@ const FirstContainerFoodOrder = styled.div`
 
 const ContainerLogo = styled.div`
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     padding: 3% 20%;
@@ -149,6 +150,10 @@ const ContainerLogo = styled.div`
     box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
     -moz-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
     -webkit-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
+
+    :hover{
+        padding: 3.5% 21%;
+    }
 `;
 
 const HamburguerIconImage = styled.img`
@@ -336,7 +341,7 @@ const ContainerTextsIndividualExtra = styled.div`
 const TitleIndividualExtra = styled.h1`
     font-size: 25px;
     font-weight: bold;
-    
+
     @media (max-width: 500px) {
         font-size: 6vw;
     }
