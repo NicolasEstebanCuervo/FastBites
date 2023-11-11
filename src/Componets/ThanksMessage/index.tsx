@@ -37,29 +37,23 @@ const ContainerThanksMessage = styled.section`
 
 const TitleThanksMessage = styled.h1`
     font-size: 50px;
-    text-align: center;
     color: #662e9b;
+    text-align: center;
 
-    @media (max-width: 1000px) {
-        font-size: 20px;
-    }
-
-    @media (max-width: 400px) {
-        font-size: 7vw;
+    @media (max-width: 500px) {
+        font-size: 12vw;
     }
 `;
 
 const SubtitleThanksMessage = styled.h1`
-    font-size: 40px;
-    color: #662e9b;
     text-align: center;
-
-    @media (max-width: 1000px) {
-        font-size: 15px;
-    }
+    font-size: 25px;
+    max-width: 50%;
+    color: #662e9b;
 
     @media (max-width: 400px) {
-        font-size: 5vw;
+        max-width: 80%;
+        font-size: 8vw;
     }
 `;
 
