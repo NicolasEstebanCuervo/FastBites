@@ -36,7 +36,7 @@ function NavBar() {
                         Home
                     </MenuItem>
                     <MenuItem  onClick={() => setMenu(false)} to="/Menu">
-                       Menu
+                        Menu
                     </MenuItem>
                     <MenuItem onClick={toggleCart} to="">Trolley</MenuItem>
                 </Menu>
@@ -122,8 +122,9 @@ const Menu = styled.ul<MenuProps>`
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
+        margin: 0;
+        padding: 0;
         gap: 5%;
-        padding-bottom: 5%;
         display: ${({ open }) => (open ? "flex" : "none")};
     }
 `;
@@ -132,16 +133,29 @@ const MenuItem = styled(Link)`
     margin-left: 40px;
     flex: 1;
     color: #000;
+    width: 100%;
     text-decoration: none;
-    color: #000;
-    text-decoration: none;
+
+
+    :hover{
+        background: #d1cece;
+    }
 
     @media (max-width: 768px) {
         font-size: 20px;
         margin-left: 0px;
+        padding: 0 2%;
     }
 
     @media (max-width: 400px) {
-        font-size: 5vw;
+        font-size: 6vw;
+    }
+
+    @media (max-width: 300px) {
+        font-size: 8vw;
+    }
+
+    @media (max-width: 200px) {
+        font-size: 10vw;
     }
 `;

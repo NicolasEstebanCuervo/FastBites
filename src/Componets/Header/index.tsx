@@ -58,6 +58,10 @@ export default Header;
 const HeaderContainer = styled.header`
     max-width: 70%;
     padding: 10% 2%;
+
+    @media (max-width: 1000px) {        
+        max-width: 100%;
+    }
 `
 
 const TitleHeader = styled.header`
@@ -76,11 +80,11 @@ const TitleHeader = styled.header`
     }
 
     @media (max-width: 300px) {        
-        font-size: 25px;
+        font-size: 20px;
     }
 
     @media (max-width: 200px) {        
-        font-size: 20px;
+        font-size: 15px;
     }
 
     @media (max-width: 100px) {        

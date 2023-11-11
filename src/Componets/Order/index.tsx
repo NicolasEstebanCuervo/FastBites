@@ -31,12 +31,8 @@ const TitleOrder = styled.h1`
     font-size: 50px;
     color: #662e9b;
 
-    @media (max-width: 1000px) {
-        font-size: 20px;
-    }
-
-    @media (max-width: 400px) {
-        font-size: 7vw;
+    @media (max-width: 500px) {
+        font-size: 10vw;
     }
 `;
 
