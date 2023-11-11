@@ -4,6 +4,7 @@ import MasterCardIcon from "../../Assets/Icons/MasterCard.svg";
 import VisaIcon from "../../Assets/Icons/Visa.svg";
 import FireIcon from "../../Assets/Icons/Fire.svg";
 import ThunderIcon from "../../Assets/Icons/Thunder.svg";
+import HamburguerIcon from "../../Assets/Images/IconHamburguer.png";
 import { Link } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -23,14 +24,15 @@ export default function FoodOrder() {
     const value = useContext(DataContext);
     const [cart, setCart] = value.cart;
     const [total] = value.total;
-
-    console.log(total);
-
+    
     return (
         <ContainerFoodOrder>
             <FirstContainerFoodOrder>
+                <ContainerLogo>
+                    <HamburguerIconImage src={HamburguerIcon} alt="" />
+                    <TitleLogo>FastBites</TitleLogo>
+                </ContainerLogo>
                 <CustomCarousel indicators={false} data-bs-theme="dark">
-                    
                     {cart.map((product: Product) => (
                         <Carousel.Item key={product.id}>
                             <CartItem>
@@ -50,7 +52,6 @@ export default function FoodOrder() {
                                         Total price: {product.price}
                                     </DescriptionProducts>
                                 </ContainerTexsCard>
-                                
                             </CartItem>
                         </Carousel.Item>
                     ))}
@@ -95,42 +96,60 @@ export default function FoodOrder() {
                     </ContainerIndividualExtra>
                 </ContainerExtras>
 
-                <ButtonOrder to="/Thanks">Pay my food</ButtonOrder>
+                <ButtonOrder onClick={()=>{cart.map((product: Product) => ()=>{console.log(delete(cart[product.id]))})}} to="/Thanks">Pay my food</ButtonOrder>
             </SecondContainerFoodOrder>
         </ContainerFoodOrder>
     );
 }
 
-const CustomCarousel = styled(Carousel)`
-  .carousel-control-next-icon {
-    position: absolute;
-    right: -70%;
-    z-index: 1;
-    font-weight: bold;
-  }
-
-  .carousel-control-prev-icon {
-    position: absolute;
-    left: -70%;
-    z-index: 1;
-    font-weight: bold;
-  }
-`;
-
-
 const ContainerFoodOrder = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5% 0;
+    padding: 2% 0;
     gap: 10vw;
 `;
 
 const FirstContainerFoodOrder = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 32%;
+    gap: 5vh;
+`;
+
+const ContainerLogo = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 20%;
+    border-radius: 20px;
+    background: #f2f2f2;
+
+    box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
+    -moz-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
+    -webkit-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
+`;
+
+const HamburguerIconImage = styled.img``;
+
+const TitleLogo = styled.h1``;
+
+const CustomCarousel = styled(Carousel)`
+    .carousel-control-next-icon {
+        position: absolute;
+        right: -70%;
+        z-index: 1;
+        font-weight: bold;
+    }
+
+    .carousel-control-prev-icon {
+        position: absolute;
+        left: -70%;
+        z-index: 1;
+        font-weight: bold;
+    }
 `;
 
 const CartItem = styled.div`
@@ -150,8 +169,7 @@ const ImageCard = styled.img`
     border-radius: 10px;
 `;
 
-const ContainerTexsCard = styled.div`
-`;
+const ContainerTexsCard = styled.div``;
 
 const TitleProducts = styled.h1`
     font-size: 30px;
@@ -170,6 +188,10 @@ const SecondContainerFoodOrder = styled.div`
     justify-content: center;
     padding: 5%;
     border-radius: 25px;
+
+    box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
+    -moz-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
+    -webkit-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
 `;
 
 const TitleFoodOrder = styled.h1`

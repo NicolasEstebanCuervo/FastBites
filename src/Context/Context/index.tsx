@@ -32,8 +32,6 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     const [cart, setCart] = useState<ProductContext[]>([]);
     const [total, setTotal] = useState(0);
 
-    console.log(cart);
-
     useEffect(() => {
         const productData = Data.items;
         if (productData) {
