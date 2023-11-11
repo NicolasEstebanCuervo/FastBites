@@ -136,15 +136,14 @@ const MenuItem = styled(Link)`
     width: 100%;
     text-decoration: none;
 
-
-    :hover{
-        background: #d1cece;
-    }
-
     @media (max-width: 768px) {
         font-size: 20px;
         margin-left: 0px;
         padding: 0 2%;
+
+        :hover{
+        background: #d1cece;
+    }
     }
 
     @media (max-width: 400px) {
