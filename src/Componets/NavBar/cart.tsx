@@ -120,7 +120,6 @@ const CartContainer = styled.div`
     flex-direction: column;
     margin: auto;
     border-radius: 25px;
-    gap: 5vh;
     margin-top: 10%;
 `;
 
@@ -130,7 +129,7 @@ const RemoveButtonCart = styled.button`
     cursor: pointer;
     position: absolute;
     top: 0.5%;
-    right: 0.5%;
+    right: 2%;
     font-size: 30px;
 
     &:hover {
@@ -166,7 +165,7 @@ const CartItem = styled.div`
     padding: 3% 5%;
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 2vh;
     border-radius: 8px;
     gap: 1%;
     position: relative;
@@ -180,39 +179,24 @@ const ProductImage = styled.img`
     height: 150px;
     border-radius: 2vw;
 
-    @media (max-width: 800px) {
+    @media (max-width: 500px) {
         max-width: 100px;
         height: 100px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 350px) {
         max-width: 80px;
         height: 80px;
     }
 
-    @media (max-width: 400px) {
-        max-width: 70px;
-        height: 70px;
-    }
-
-    @media (max-width: 350px) {
+    @media (max-width: 250px) {
         max-width: 60px;
         height: 60px;
     }
 
-    @media (max-width: 300px) {
-        max-width: 50px;
-        height: 50px;
-    }
-
-    @media (max-width: 250px) {
-        max-width: 40px;
-        height: 40px;
-    }
-
-    @media (max-width: 60px) {
-        max-width: 10px;
-        height: 10px;
+    @media (max-width: 150px) {
+        max-width: 30px;
+        height: 30px;
     }
 `;
 
@@ -221,38 +205,24 @@ const ProductInfo = styled.div`
 `;
 
 const ProductTitle = styled.h1`
-    font-size: 25px;
-
-    @media (max-width: 800px) {
-        font-size: 3vw;
-    }
+    font-size: 30px;
+    margin-bottom: 0px !important;
 
     @media (max-width: 600px) {
-        font-size: 3.5vw;
-    }
-
-    @media (max-width: 400px) {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     @media (max-width: 300px) {
-        font-size: 5vw;
+        font-size: 6vw;
     }
 `;
 
 const ProductPrice = styled.p`
     font-size: 20px;
-
-    @media (max-width: 800px) {
-        font-size: 2.5vw;
-    }
+    margin-bottom: 0px !important;
 
     @media (max-width: 600px) {
-        font-size: 3vw;
-    }
-
-    @media (max-width: 400px) {
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     @media (max-width: 300px) {
@@ -281,14 +251,6 @@ const RemoveButtonProduct = styled.button`
     @media (max-width: 600px) {
         font-size: 5vw;
     }
-
-    @media (max-width: 400px) {
-        font-size: 6vw;
-    }
-
-    @media (max-width: 300px) {
-        font-size: 8vw;
-    }
 `;
 
 const QuantityButtons = styled.div`
@@ -296,7 +258,7 @@ const QuantityButtons = styled.div`
     align-items: center;
     justify-content: center;
     margin-right: 2vw;
-    gap: 10%;
+    gap: 5%;
 
     @media (max-width: 800px) {
         gap: 0px;
@@ -316,18 +278,11 @@ const QuantityButtons = styled.div`
             transform: scale(1.2);
         }
 
-        @media (max-width: 600px) {
-            font-size: 5vw;
-        }
-
         @media (max-width: 400px) {
-            font-size: 6vw;
-        }
-
-        @media (max-width: 300px) {
-            font-size: 7vw;
+            font-size: 10vw;
         }
     }
+
 
     span {
         font-size: 30px;
