@@ -29,7 +29,7 @@ export const ItemList: React.FC<ProductoItemProps> = ({
                     Pariatur laboriosam quo doloremque nemo eos corrupti
                 </DescriptionFood>
             </TextContainer>
-            <Button onClick={() => addToCart(id)} className="btn">
+            <Button onClick={() => addToCart(id)} >
                 Añadir al carrito
             </Button>
         </FoodContainer>

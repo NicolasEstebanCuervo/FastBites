@@ -75,13 +75,10 @@ const OrderContainer = styled.section`
 const TitleOrder = styled.h1`
     font-size: 50px;
     color: #662e9b;
+    text-align: center;
 
-    @media (max-width: 1000px) {
-        font-size: 20px;
-    }
-
-    @media (max-width: 400px) {
-        font-size: 7vw;
+    @media (max-width: 500px) {
+        font-size: 12vw;
     }
 `;
 
@@ -91,13 +88,9 @@ const SubtitleOrder = styled.p`
     max-width: 50%;
     color: #662e9b;
 
-    @media (max-width: 1000px) {
-        font-size: 20px;
-    }
-
     @media (max-width: 400px) {
         max-width: 80%;
-        font-size: 6vw;
+        font-size: 8vw;
     }
 `;
 
