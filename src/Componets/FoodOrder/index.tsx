@@ -24,7 +24,11 @@ export default function FoodOrder() {
     const value = useContext(DataContext);
     const [cart, setCart] = value.cart;
     const [total] = value.total;
-    
+
+    const deleteCart = () => {
+        setCart([]);
+    };
+
     return (
         <ContainerFoodOrder>
             <FirstContainerFoodOrder>
@@ -96,7 +100,14 @@ export default function FoodOrder() {
                     </ContainerIndividualExtra>
                 </ContainerExtras>
 
-                <ButtonOrder onClick={()=>{cart.map((product: Product) => ()=>{console.log(delete(cart[product.id]))})}} to="/Thanks">Pay my food</ButtonOrder>
+                <ButtonOrder
+                    onClick={() => {
+                        deleteCart();
+                    }}
+                    to="/Thanks"
+                >
+                    Pay my food
+                </ButtonOrder>
             </SecondContainerFoodOrder>
         </ContainerFoodOrder>
     );
@@ -108,6 +119,11 @@ const ContainerFoodOrder = styled.section`
     align-items: center;
     padding: 2% 0;
     gap: 10vw;
+    min-height: 100vh;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
 `;
 
 const FirstContainerFoodOrder = styled.div`
@@ -117,6 +133,10 @@ const FirstContainerFoodOrder = styled.div`
     align-items: center;
     width: 32%;
     gap: 5vh;
+
+    @media (max-width: 1000px) {
+        width:80%;
+    }
 `;
 
 const ContainerLogo = styled.div`
@@ -126,29 +146,43 @@ const ContainerLogo = styled.div`
     padding: 3% 20%;
     border-radius: 20px;
     background: #f2f2f2;
-
     box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
     -moz-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
     -webkit-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
 `;
 
-const HamburguerIconImage = styled.img``;
+const HamburguerIconImage = styled.img`
+    width: 100px;
 
-const TitleLogo = styled.h1``;
+    @media (max-width: 500px) {
+        width: 20vw;
+    }
+`;
+
+const TitleLogo = styled.h1`
+    font-size: 50px;
+    @media (max-width: 500px) {
+        font-size: 10vw;
+    }
+`;
 
 const CustomCarousel = styled(Carousel)`
     .carousel-control-next-icon {
         position: absolute;
-        right: -70%;
+        right: -80%;
         z-index: 1;
         font-weight: bold;
+        max-width: 300px;
+        width: 100%;
     }
 
     .carousel-control-prev-icon {
         position: absolute;
-        left: -70%;
+        left: -80%;
         z-index: 1;
         font-weight: bold;
+        max-width: 300px;
+        width: 100%;
     }
 `;
 
@@ -158,7 +192,6 @@ const CartItem = styled.div`
     flex-direction: column;
     padding: 10% 8%;
     width: 100%;
-    max-height: 500px;
     border-radius: 20px;
     background: #f2f2f2;
 `;
@@ -173,10 +206,18 @@ const ContainerTexsCard = styled.div``;
 
 const TitleProducts = styled.h1`
     font-size: 30px;
+
+    @media (max-width: 500px) {
+        font-size: 7vw;
+    }
 `;
 
 const DescriptionProducts = styled.h3`
-    font-size: 23px;
+    font-size: 25px;
+
+    @media (max-width: 500px) {
+        font-size: 6vw;
+    }
 `;
 
 const SecondContainerFoodOrder = styled.div`
@@ -188,7 +229,6 @@ const SecondContainerFoodOrder = styled.div`
     justify-content: center;
     padding: 5%;
     border-radius: 25px;
-
     box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
     -moz-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
     -webkit-box-shadow: 2px 0px 52px 25px rgba(53, 23, 23, 0.16);
@@ -210,6 +250,7 @@ const OrderPrice = styled.h3`
     justify-content: center;
     font-size: 25px;
     text-align: center;
+
     @media (max-width: 500px) {
         font-size: 6vw;
     }
@@ -217,6 +258,11 @@ const OrderPrice = styled.h3`
 
 const DolarSigno = styled.h3`
     font-weight: bold;
+    font-size: 25px;
+    
+    @media (max-width: 500px) {
+        font-size: 6vw;
+    }
 `;
 
 const ContainerIcons = styled.div`
@@ -317,8 +363,8 @@ const ButtonOrder = styled(Link)`
     font-weight: bold;
     margin-top: 15px;
 
-    @media (max-width: 300px) {
+    @media (max-width: 400px) {
         font-size: 5vw;
-        padding: 1vh 6vw;
+        padding: 1vh 10vw;
     }
 `;

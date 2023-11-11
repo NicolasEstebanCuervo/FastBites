@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext} from "react";
 import styled from "@emotion/styled";
 import { DataContext } from "../../Context/Context";
 import hamburguerIcon from "../../Assets/Icons/Hamburguer.svg";
 import hamburguerButton from "../../Assets/Icons/HamburguerButton.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavBar() {
     const value = useContext(DataContext);

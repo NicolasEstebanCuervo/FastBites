@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import { DataContext } from "../../Context/Context";
 import styled from "@emotion/styled";
 
@@ -20,20 +19,20 @@ export const ItemList: React.FC<ProductoItemProps> = ({
     const { addToCart } = useContext(DataContext);
 
     return (
-                <FoodContainer key={id}>
-                    <ImageFood src={image} alt={title} />
-                    <TextContainer>
-                        <TitleFood>{title}</TitleFood>
-                    <div className="price">${price} </div>
-                        <DescriptionFood>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Pariatur laboriosam quo doloremque nemo eos corrupti
-                        </DescriptionFood>
-                    </TextContainer>
-                    <Button onClick={() => addToCart(id)} className="btn">
-                        Añadir al carrito
-                    </Button>
-                </FoodContainer>
+        <FoodContainer>
+            <ImageFood src={image} alt={title} />
+            <TextContainer>
+                <TitleFood>{title}</TitleFood>
+                <div className="price">${price} </div>
+                <DescriptionFood>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Pariatur laboriosam quo doloremque nemo eos corrupti
+                </DescriptionFood>
+            </TextContainer>
+            <Button onClick={() => addToCart(id)} className="btn">
+                Añadir al carrito
+            </Button>
+        </FoodContainer>
     );
 };
 
@@ -47,29 +46,28 @@ const FoodContainer = styled.div`
     border-radius: 20px;
     background-color: #f2f2f2;
 
-
-    @media (max-width: 1200PX) {
-        width:300px;
+    @media (max-width: 1200px) {
+        width: 300px;
     }
 
-    @media (max-width: 1000PX) {
-        width:250px;
+    @media (max-width: 1000px) {
+        width: 250px;
     }
 
-    @media (max-width: 850PX) {
-        width:300px;
+    @media (max-width: 850px) {
+        width: 300px;
     }
 
-    @media (max-width: 650PX) {
-        width:250px;
+    @media (max-width: 650px) {
+        width: 250px;
     }
 
-    @media (max-width: 550PX) {
-        width:300px;
+    @media (max-width: 550px) {
+        width: 300px;
     }
 
-    @media (max-width: 400PX) {
-        width:80vw;
+    @media (max-width: 400px) {
+        width: 80vw;
     }
 `;
 
@@ -101,7 +99,7 @@ const ImageFood = styled.img`
     @media (max-width: 450px) {
         max-width: 240px;
     }
-    
+
     @media (max-width: 350px) {
         max-width: 200px;
     }
@@ -115,7 +113,6 @@ const ImageFood = styled.img`
     }
 `;
 
-
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -126,8 +123,8 @@ const TextContainer = styled.div`
 const TitleFood = styled.h1`
     font-size: 24px;
     margin-top: 10px;
-    
-    @media (max-width: 1000PX) {
+
+    @media (max-width: 1000px) {
         font-size: 20px;
     }
 
@@ -141,7 +138,7 @@ const DescriptionFood = styled.p`
     margin-top: 5px;
     max-width: 80%;
 
-    @media (max-width: 1000PX) {
+    @media (max-width: 1000px) {
         font-size: 15px;
     }
 
@@ -151,7 +148,7 @@ const DescriptionFood = styled.p`
 `;
 
 const Button = styled.button`
-    background-color: #F9C80E;
+    background-color: #f9c80e;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -159,12 +156,12 @@ const Button = styled.button`
     cursor: pointer;
     margin-top: 15px;
     font-weight: bold;
-    
-    @media (max-width: 1200PX) {
+
+    @media (max-width: 1200px) {
         max-width: 260px;
     }
 
-    @media (max-width: 1000PX) {
+    @media (max-width: 1000px) {
         max-width: 200px;
     }
 
