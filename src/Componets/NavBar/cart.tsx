@@ -375,8 +375,8 @@ const PaymentButton = styled(Link)`
     cursor: pointer;
     transition: background-color 0.3s;
 
-    &:hover {
-        background-color: #ffa500;
+    :hover{
+        background: #e7b910;
     }
 
     @media (max-width: 1200px) {

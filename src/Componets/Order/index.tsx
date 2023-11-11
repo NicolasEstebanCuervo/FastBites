@@ -67,6 +67,11 @@ const ButtonOrder = styled(Link)`
     cursor: pointer;
     font-weight: bold;
     margin-top: 15px;
+    transition: background-color 0.3s;
+
+    :hover{
+        background: #e7b910;
+    }
 
     @media (max-width: 300px) {
         font-size: 6vw;

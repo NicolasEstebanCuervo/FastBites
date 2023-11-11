@@ -241,6 +241,10 @@ const Button = styled.button`
     margin-top: 15px;
     font-weight: bold;
 
+    :hover{
+        background: #e7b910;
+    }
+
     @media (max-width: 1200px) {
         max-width: 260px;
     }
