@@ -335,6 +335,8 @@ const ContainerTextsIndividualExtra = styled.div`
 
 const TitleIndividualExtra = styled.h1`
     font-size: 25px;
+    font-weight: bold;
+    
     @media (max-width: 500px) {
         font-size: 6vw;
     }
