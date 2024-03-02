@@ -101,6 +101,7 @@ const ButtonOrder = styled(Link)`
     font-weight: bold;
     margin-top: 15px;
     transition: background-color 0.3s;
+    text-align: center;
     
     :hover{
         background: #e7b910;
