@@ -43,10 +43,15 @@ const LogoFooter = styled.img`
 `;
 
 const TitleFooter = styled.h1`
-    font-size: 20px;
+    font-size: 25px;
     color: #4e4e4e;
+    text-align: center;
 
     @media (max-width: 750px) {
-        font-size: 2.7vw;
+        font-size: 20px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 5vw;
     }
 `;

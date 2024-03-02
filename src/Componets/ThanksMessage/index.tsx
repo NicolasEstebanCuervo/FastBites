@@ -51,9 +51,10 @@ const SubtitleThanksMessage = styled.h1`
     max-width: 50%;
     color: #662e9b;
 
+
     @media (max-width: 400px) {
         max-width: 80%;
-        font-size: 8vw;
+        font-size: 6vw;
     }
 `;
 
@@ -93,7 +94,7 @@ const ButtonOrder = styled(Link)`
     text-decoration: none;
     background-color: #f9c80e;
     border: none;
-    padding: 20px 70px;
+    padding: 20px 50px;
     font-size: 20px;
     border-radius: 4px;
     cursor: pointer;
@@ -105,8 +106,16 @@ const ButtonOrder = styled(Link)`
         background: #e7b910;
     }
 
-    @media (max-width: 300px) {
-        font-size: 7vw;
+    @media (max-width: 1200px) {
+        max-width: 260px;
+    }
+
+    @media (max-width: 1000px) {
+        max-width: 300px;
+    }
+
+    @media (max-width: 350px) {
+        font-size: 6vw;
         padding: 1vh 6vw;
     }
 `;
