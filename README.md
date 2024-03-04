@@ -35,8 +35,3 @@ en las dependencia del proyecto. Para solucionarlo abra la terminal del proyecto
 ".
 
 ---
-
-###  📘 Librerias usadas:
-   
-Para este proyecto solo se necesito tener TypeScript instalado en el proyecto.
-
